@@ -1,0 +1,18 @@
+<h1>Integrantes</h1>
+<br>
+<div class="col-xs-3" *ngFor="let intLista of integrantes">
+    <app-integrante
+    [integrante]="intLista"
+    ></app-integrante>
+</div>
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <app-add-integrante
+            (addIntegrante)="addIntegranteLista($event)"
+            (createIntegrantes)="createListaIntegrantes($event)"
+            ></app-add-integrante>
+        </div>
+    </div>
+</div>
